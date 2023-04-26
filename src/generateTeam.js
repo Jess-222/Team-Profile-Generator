@@ -1,4 +1,4 @@
-const managerCard = (manager) => {
+const managersCard = (manager) => {
     return `<section class="managerCard">
     <h1>Manager</h1>
     <ul>
@@ -10,23 +10,57 @@ const managerCard = (manager) => {
 </section>`
 }
 
+const internsCard = (intern) => {
+    return `<section class="internCard">
+    <h1>Intern</h1>
+    <ul>
+        <li>Name: ${intern.name}</li>
+        <li>Email: ${intern.email}</li>
+        <li>ID: ${intern.id}</li>
+        <li>School: ${intern.school}</li>
+    </ul>
+</section>`
+}
 
-const createCards = function(data) {
-    pageArray = [];
+const engineersCard = (engineer) => {
+    return `<section class="engineerCard">
+    <h1>Engineer</h1>
+    <ul>
+        <li>Name: ${engineer.name}</li>
+        <li>Email: ${engineer.email}</li>
+        <li>ID: ${engineer.id}</li>
+        <li>GitHub: ${engineer.github}</li>
+    </ul>
+</section>`
+}
+
+const createCards = (data) => {
+    var pageArray = [];
     for (let i = 0; i < data.length; i++) {
-        const employee = data[i];
-        const role = employee.getRole();
+        // const employee = data[i];
+        const role = data[i].getRole();
+        console.log(role)
+        // Calling managersCard
         if (role === 'Manager') {
-            const managerCard = managerCard(employee);
+            const managerCard = managersCard(data[i]);
             pageArray.push(managerCard);
         }
+        if (role === 'Intern') {
+            const internCard = internsCard(data[i]);
+            pageArray.push(internCard);
+        }
+        if (role === 'Engineer') {
+            const engineerCard = engineersCard(data[i]);
+            pageArray.push(engineerCard);
+        }
+
     }
     const employeeCards = pageArray.join('')
-    const generateTeam = generateTeam(employeeCards);
+    const generateTeam = generateTeams(employeeCards);
     return generateTeam;
 };
 
-const generateTeam = () => {
+const generateTeams = (data) => {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -37,9 +71,17 @@ const generateTeam = () => {
         <title>Team Profile</title>
     </head>
     <body>
-        ${createCards(data)}
+        ${data}
     </body>
     </html>`
 }
 
-export default createCards()
+
+
+
+
+
+
+
+
+export default createCards;
