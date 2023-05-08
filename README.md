@@ -28,8 +28,10 @@ THEN I exit the application, and the HTML is generated
 
 ## Mock-up (Image)
 
-![siteImg](./employee%20tracker.png)
+![siteImg](./profile%20generator.png)
 
 ## Walk-through video link
 
 ## Github repo link
+
+https://github.com/Jess-222/Team-Profile-Generator.git
