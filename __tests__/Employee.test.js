@@ -1,5 +1,5 @@
-// import Employee from "../lib/Employee.js"
-const Employee = require('../lib/Employee.js')
+import Employee from "../lib/Employee.js"
+//const Employee = require('../lib/Employee.js')
 
 test("checks that getName() method works", () => {
   const e = new Employee("Jessica", "jessica@gmail.com", 4,);

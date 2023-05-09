@@ -1,5 +1,5 @@
-// import Intern from "../lib/Intern.js"
-const Intern = require('../lib/Intern.js')
+import Intern from "../lib/Intern.js"
+//const Intern = require('../lib/Intern.js')
 
 test("checks that getSchool() method works", () => {
     const e = new Intern("Jessica", "jessica@gmail.com", 4, "UOFU");

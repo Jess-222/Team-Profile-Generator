@@ -32,6 +32,8 @@ THEN I exit the application, and the HTML is generated
 
 ## Walk-through video link
 
+https://drive.google.com/file/d/11c8QwxPZHjDDFAKXymns_WjOH_r3F9g7/view
+
 ## Github repo link
 
 https://github.com/Jess-222/Team-Profile-Generator.git
