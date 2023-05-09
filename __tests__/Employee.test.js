@@ -1,16 +1,23 @@
-// const Employee = require('../lib/Employee');
+// import Employee from "../lib/Employee.js"
+const Employee = require('../lib/Employee.js')
 
+test("checks that getName() method works", () => {
+  const e = new Employee("Jessica", "jessica@gmail.com", 4,);
+  expect(e.getName()).toEqual("Jessica");
+});
 
-// test('properly fills in employee information', () => {
-// expect(
-//     Employee()
-// ).toBe()
-// });
+test("checks that getId() method works", () => {
+  const e = new Employee("Jessica", "jessica@gmail.com",  4);
+  expect(e.getId()).toEqual(4);
+});
 
-const Employee = require("../lib/Employee");
+test("checks that getEmail() method works", () => {
+  const e = new Employee("Jessica", "jessica@gmail.com",  4);
+  expect(e.getEmail()).toEqual("jessica@gmail.com");
+});
 
-test("Create employee", () => {
-  const e = new Employee();
-  expect(typeof(e)).toBe("object");
+test("checks that getRole() method works", () => {
+  const e = new Employee("Jessica", "jessica@gmail.com",  4);
+  expect(e.getRole()).toEqual("Employee");
 });
 
